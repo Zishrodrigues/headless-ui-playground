@@ -1,2 +1,16 @@
 # headless-ui-playground
-Playground for testing out headless-ui using Vue 3 and Tailwind
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run start
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```

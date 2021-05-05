@@ -1,9 +1,11 @@
 import Disclosure from '@/components/Disclosure.vue';
+import UiAccordion from '@funda/ui/src/components/ui-accordion.vue';
 
 export default {
   name: 'Home',
   components: {
     Disclosure,
+    UiAccordion,
   },
   data: function () {
     return {

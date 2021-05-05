@@ -1,19 +1,20 @@
 <template>
-  <Disclosure>
-    <DisclosureButton class="py-2">
-      <slot name="buttonText" />
-    </DisclosureButton>
-    <DisclosurePanel class="text-gray-500">
+  <div>
+    <Disclosure as="details" v-slot="{ open }">
+      <DisclosureButton as="summary" class="w-full py-3 cursor-pointer focus:outline-none list-none flex justify-between items-center">
+        <slot name="buttonText" />
+        <div class="display-inline text-blue-1 fill-current h-6 w-6 align-middle" v-html="open ? arrowUpIcon : arrowDownIcon"></div>
+      </DisclosureButton>
       <slot name="content" />
-    </DisclosurePanel>
-  </Disclosure>
+    </Disclosure>
+  </div>
 </template>
 
 <script>
+import { arrowUp, arrowDown } from "@funda/icons";
 import {
   Disclosure,
   DisclosureButton,
-  DisclosurePanel,
 } from "@headlessui/vue";
 
 export default {
@@ -21,7 +22,12 @@ export default {
   components: {
     Disclosure,
     DisclosureButton,
-    DisclosurePanel,
+  },
+  data: function () {
+    return {
+      arrowUpIcon: arrowUp.svg,
+      arrowDownIcon: arrowDown.svg,
+    }
   },
   methods: {
     //

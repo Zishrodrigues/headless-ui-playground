@@ -8,6 +8,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@funda/icons": "^1.9.0",
+    "@funda/tailwind-config": "^6.1.0",
+    "@funda/ui": "^4.2.0",
     "@headlessui/vue": "^1.0.0",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "^9.8.6",
